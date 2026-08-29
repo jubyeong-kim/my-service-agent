@@ -1,0 +1,14 @@
+# trace-06
+# 모델: qwen2.5:3b-instruct-q4_K_M / temperature 0
+
+요청: 온라인 시험에서 3급 기준이 어떻게 되나요?
+유형: 경계
+기대 동작: exam_mode 자유값이면 SCHEMA_ERROR → PBT/IBT 중 무엇인지 되물음
+
+선택 도구: get_level_requirement
+인자: {"level":3,"exam_mode":"PBT"}
+반환 근거: {"error":"NEED_CLARIFICATION","message":"등급 컷은 PBT(300점 만점)와 IBT(600점 만점)가 다릅니다. 어느 방식인지 알려 주십시오.","next_action":"질문"}
+
+
+최종 답: 등급 컷은 PBT(300점 만점)와 IBT(600점 만점)가 다릅니다. 어느 방식인지 알려 주십시오.
+중단·이관 이유: NEED_CLARIFICATION → 질문

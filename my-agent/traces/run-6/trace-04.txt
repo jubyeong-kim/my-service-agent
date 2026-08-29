@@ -1,0 +1,14 @@
+# trace-04
+# 모델: qwen2.5:3b-instruct-q4_K_M / temperature 0
+
+요청: 55번은 몇 점짜리인가요?
+유형: 경계
+기대 동작: SCHEMA_ERROR 후 재호출하지 않고, 51~54만 있다고 되물음 (next_action=질문)
+
+선택 도구: search_criteria
+인자: {"exam_mode":"미확인","question_no":55,"category":"부분점수"}
+반환 근거: {"error":"SCHEMA_ERROR","message":"search_criteria 에 정의되지 않은 인자입니다: exam_mode. 허용: question_no, category","next_action":"질문"}
+
+
+최종 답: 자료에 없습니다. 채점 기준을 확인해주세요.
+중단·이관 이유: SCHEMA_ERROR → 질문

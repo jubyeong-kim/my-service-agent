@@ -1,0 +1,14 @@
+# trace-02
+# 모델: qwen2.5:3b-instruct-q4_K_M / temperature 0
+
+요청: IBT에서 3급을 받으려면 몇 점이 필요한가요?
+유형: 정상
+기대 동작: get_level_requirement(3, IBT) 호출 → 204~261점을 반환값에서 인용
+
+선택 도구: get_level_requirement
+인자: {"level":3,"exam_mode":"IBT"}
+반환 근거: {"level":3,"exam_mode":"IBT","requirement":{"id":"LVL-003","text":"TOPIK II 3급 평가 기준: 일상생활을 영위하는 데 별 어려움을 느끼지 않으며, 다양한 공공시설의 이용과 사회적 관계 유지에 필요한 기초적 언어 기능을 수행할 수 있다. 친숙하고 구체적인 소재는 물론, 자신에게 친숙한 사회적 소재를 문단 단위로 표현하거나 이해할 수 있다. 문어와 구어의 기본적인 특성을 구분해서 이해하고 사용할 수 있다.","category":"등급기준","source_title":"TOPIK 등급별 평가 기준","official":true},"cut":{"id":"EXM-004","text":"IBT 방식 TOPIK II의 등급 컷은 600점 만점 기준으로 3급 204~261점, 4급 262~330점, 5급 331~411점, 6급 412~600점이다. PBT 방식과 만점이 달라 점수 기준도 다르다.","category":"등급기준","source_title":"국립국제교육원 TOPIK IBT 응시자 안내서","official":true},"missing":null}
+
+
+최종 답: IBT 방식에서 3급을 받으려면 204~261점 사이의 점수를 받는다. 이는 600점 만점 기준입니다. PBT 방식과 만점이 달라 점수 기준도 다릅니다.
+중단·이관 이유: 없음 (정상 완료)

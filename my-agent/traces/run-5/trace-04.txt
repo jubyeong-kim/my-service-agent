@@ -1,0 +1,14 @@
+# trace-04
+# 모델: qwen2.5:3b-instruct-q4_K_M / temperature 0
+
+요청: 55번은 몇 점짜리인가요?
+유형: 경계
+기대 동작: SCHEMA_ERROR 후 재호출하지 않고, 51~54만 있다고 되물음 (next_action=질문)
+
+선택 도구: search_criteria
+인자: {"question_no":55,"category":"부분점수","exam_mode":"미확인"}
+반환 근거: {"error":"SCHEMA_ERROR","message":"search_criteria.question_no 값이 허용 목록 밖입니다. 허용: 51, 52, 53, 54","next_action":"질문"}
+
+
+최종 답: 질문이 잘못되었습니다. 55번 문항은 PBT 쓰기에서 제공되는 문항이 아닙니다. 문항 번호를 확인해주세요.
+중단·이관 이유: SCHEMA_ERROR → 질문
